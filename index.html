@@ -7,7 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
 	<link rel="icon" type="image/ico" href="fav.ico" />
-	<script src="https://use.fontawesome.com/754c064b29.js"></script>
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/media.css" />
 	<link rel="stylesheet" href="css/fonts.css" />
@@ -18,6 +17,13 @@
 </head>
 <body>
 	<!--BEGIN Header-->
+	<a class="popup" href="#callFormWrapper">
+		<div class="fixed_button">
+			<!-- <div class="esc">×</div> -->
+			<p>У Вас острая зубная боль?</p>
+			<img src="img/taxi.jpg" alt="">
+		</div>
+	</a>
 	<header>
 		<div class="container">
 			<div class="row top_head">
@@ -37,7 +43,7 @@
 					<a href="tel:+380735000307">(073) 500 03 07</a>
 				</div>
 				<div class="col-md-3 top_btn hidden-sm hidden-xs">
-					<a href="" class="popup"><button>Давайте мы перезвоним</button></a>
+					<a href="#topFormWrapper" class="popup"><button>Давайте мы перезвоним</button></a>
 				</div>
 			</div>
 			<div class="row desc">
@@ -293,8 +299,33 @@
 							<img src="img/photo_1.jpg" alt="">
 						</div>
 						<div class="photo_item">
-							<img src="img/photo_1.jpg" alt="">
+							<img src="img/photo_10.jpg" alt="">
 						</div>
+						<div class="photo_item">
+							<img src="img/photo_2.jpg" alt="">
+						</div>
+						<div class="photo_item">
+							<img src="img/photo_3.jpg" alt="">
+						</div>
+						<div class="photo_item">
+							<img src="img/photo_4.jpg" alt="">
+						</div>
+						<div class="photo_item">
+							<img src="img/photo_5.jpg" alt="">
+						</div>
+						<div class="photo_item">
+							<img src="img/photo_6.jpg" alt="">
+						</div>
+						<div class="photo_item">
+							<img src="img/photo_7.jpg" alt="">
+						</div>
+						<div class="photo_item">
+							<img src="img/photo_8.jpg" alt="">
+						</div>
+						<div class="photo_item">
+							<img src="img/photo_9.jpg" alt="">
+						</div>
+						
 					</div>
 				</div>
 		</div>
@@ -341,7 +372,11 @@
 	<section class="video">
 		<div class="container">
 			<h3>Посмотрите короткое видео <br>о нашей клинике</h3>
-			<img src="img/video.jpg" alt="">
+			<div class="video_wrapper">
+				<video controls poster="img/video.jpg" id="mainVideo" src="video_1.mp4"></video>
+				<button id="overlay"></button>
+			</div>
+			
 		</div>
 	</section>
 
@@ -381,7 +416,7 @@
 							<div class="doctor_item">
 								<img src="img/doctor_4.jpg" alt="">
 								<h4>Безруков <br>Сергей Александрович</h4>
-								<p>?????????????</p>
+								<p>стоматолог-терапевт, <br>врач второй категории</p>
 								<a href="#doctor4FormWrapper" class="popup"><button class="main_btn">Записаться на прием</button></a>
 							</div>
 						</div>
@@ -389,7 +424,7 @@
 							<div class="doctor_item">
 								<img src="img/doctor_5.jpg" alt="">
 								<h4>Арлачев <br>Владислав Валериевич</h4>
-								<p>?????????????</p>
+								<p>эстетическая стоматология, <br>терапия, ортопедия</p>
 								<a href="#doctor5FormWrapper" class="popup"><button class="main_btn">Записаться на прием</button></a>
 							</div>
 						</div>
@@ -397,7 +432,7 @@
 							<div class="doctor_item">
 								<img src="img/doctor_6.jpg" alt="">
 								<h4>Маенко <br>Алина Викторовна</h4>
-								<p>?????????????</p>
+								<p>стоматолог-ортодонт, терапевт, <br>врач второй категории</p>
 								<a href="#doctor6FormWrapper" class="popup"><button class="main_btn">Записаться на прием</button></a>
 							</div>
 						</div>
@@ -405,7 +440,7 @@
 							<div class="doctor_item">
 								<img src="img/doctor_7.jpg" alt="">
 								<h4>Скейк <br>Хайдар</h4>
-								<p>?????????????</p>
+								<p>стоматолог общего приема врач второй категории</p>
 								<a href="#doctor7FormWrapper" class="popup"><button class="main_btn">Записаться на прием</button></a>
 							</div>
 						</div>
@@ -425,7 +460,7 @@
 					<div class="cert_slider">
 						<div class="col-sm-3">
 							<a class="photo_popup" href="img/cert_5.jpg"><img src="img/cert_5.jpg" alt=""></a>
-							<p>Естетичної реставрації фронтальної групи зубів</p>
+							<p>Эстетическая реставрация фронтальной группы зубов</p>
 						</div>
 						<div class="col-sm-3">
 							<a class="photo_popup" href="img/cert_6.jpg"><img src="img/cert_6.jpg" alt=""></a>
@@ -437,20 +472,15 @@
 						</div>
 						<div class="col-sm-3">
 							<a class="photo_popup" href="img/cert_8.jpg"><img src="img/cert_8.jpg" alt=""></a>
-							<p>Современный взгляд на проблемы обработки и надежной,
-прогнозируемой обтурации системы корневых каналов,
-современные достижения в области эндодонтии</p>
+							<p>Клинические техники восстановления зубов прямыми реставрациями</p>
 						</div>
 						<div class="col-sm-3">
 							<a class="photo_popup" href="img/cert_9.jpg"><img src="img/cert_9.jpg" alt=""></a>
-							<p>"Естетичні реставрації фронтальної групи зубів"
-"Клінічні техніки відновлення фронтальної группи зубів
-прямими реставраціями"</p>
+							<p>Методики прямой реставрации зубов</p>
 						</div>
 						<div class="col-sm-3">
 							<a class="photo_popup" href="img/cert_10.jpg"><img src="img/cert_10.jpg" alt=""></a>
-							<p>Восстановление остутствующих зубов адгезивными
-мостовидными конструкциями</p>
+							<p>Восстановление остутствующих зубов адгезивными мостовидными конструкциями</p>
 						</div>
 						<div class="col-sm-3">
 							<a class="photo_popup" href="img/cert_11.jpg"><img src="img/cert_11.jpg" alt=""></a>
@@ -458,8 +488,7 @@
 						</div>
 						<div class="col-sm-3">
 							<a class="photo_popup" href="img/cert_1.jpg"><img src="img/cert_1.jpg" alt=""></a>
-							<p>Світ реставраційних технологій 3M ESPE. Клінічні техніки
-відновлення зубів прямими реставраціями</p>
+							<p>Клинические техники восстановления зубов прямыми реставрациями</p>
 						</div>
 						<div class="col-sm-3">
 							<a class="photo_popup" href="img/cert_2.jpg"><img src="img/cert_2.jpg" alt=""></a>
@@ -471,9 +500,7 @@
 						</div>
 						<div class="col-sm-3">
 							<a class="photo_popup" href="img/cert_4.jpg"><img src="img/cert_4.jpg" alt=""></a>
-							<p>Современный взгляд на проблемы обработки и надежной,
-прогнозируемой обтурации системы корневых каналов,
-современные достижения в области эндодонтии</p>
+							<p>Проблемы обработки и надежной, прогнозируемой обтурации системы корневых каналов</p>
 						</div>
 					</div>
 				</div>
@@ -481,7 +508,7 @@
 		</div>
 	</section>
 
-	<div class="review">
+	<section class="review">
 		<div class="container">
 			<h3>Нам под силу самые сложные задачи</h3>
 			<div class="row">
@@ -493,11 +520,83 @@
 							<div class="col-sm-6">
 								<div class="review_item rev_before">
 									<img src="img/review_1.jpg" alt="">
+									<div class="before">До</div>
 								</div>
 							</div>
 							<div class="col-sm-6">
-								<div class="review_item rev_before">
+								<div class="review_item rev_after">
 									<img src="img/review_1_.jpg" alt="">
+									<div class="after">После</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="col-sm-6">
+								<div class="review_item rev_before">
+									<img src="img/review_2.jpg" alt="">
+									<div class="before">До</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="review_item rev_after">
+									<img src="img/review_2_.jpg" alt="">
+									<div class="after">После</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="col-sm-6">
+								<div class="review_item rev_before">
+									<img src="img/review_3.jpg" alt="">
+									<div class="before">До</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="review_item rev_after">
+									<img src="img/review_3_.jpg" alt="">
+									<div class="after">После</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="col-sm-6">
+								<div class="review_item rev_before">
+									<img src="img/review_4.jpg" alt="">
+									<div class="before">До</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="review_item rev_after">
+									<img src="img/review_4_.jpg" alt="">
+									<div class="after">После</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="col-sm-6">
+								<div class="review_item rev_before">
+									<img src="img/review_5.jpg" alt="">
+									<div class="before">До</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="review_item rev_after">
+									<img src="img/review_5_.jpg" alt="">
+									<div class="after">После</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="col-sm-6">
+								<div class="review_item rev_before">
+									<img src="img/review_6.jpg" alt="">
+									<div class="before">До</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="review_item rev_after">
+									<img src="img/review_6_.jpg" alt="">
+									<div class="after">После</div>
 								</div>
 							</div>
 						</div>
@@ -506,14 +605,14 @@
 				<a href="#reviewFormWrapper" class="popup"><button class="main_btn">Хочу такой результат</button></a>
 			</div>
 		</div>
-	</div>
+	</section>
 
 	<section id="contact" class="contact">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
 					<h4>Как нас найти</h4>
-					<p>г. Харьков <br>ул. Сумская, 71</p>
+					<p>г. Харьков <br>м. Университет, ул. Сумская, 71</p>
 					<p>м. Героев Труда, <br>ул. Гвардейцев-Широнинцев, 50/29 </p>
 					<p><a href="tel:+380735000307"></a>(073) 500 03 07</p>
 					<p><a href="mailto:stomatlementa71@gmail.com">stomatlementa71@gmail.com</a></p>
@@ -527,9 +626,6 @@
 			</div>
 		</div>
 	</section>
-
-
-
 
 	<footer>
 		<div class="container">
@@ -598,7 +694,7 @@
 				<input type="hidden" name="whatform" value="Форма - Получить консультацию" />
 				<input type="text" name="name" placeholder="Ваше имя" />
 				<input type="tel" name="phone" class="phone" placeholder="Ваш телефон" />
-				<button class="main_btn2">Получить каталог</button>
+				<button class="main_btn2">Получить консультацию</button>
 			</form>
 		</div>
 	</div>
@@ -825,6 +921,19 @@
 			</form>
 		</div>
 	</div>
+	<div class="hidden">
+		<div class="form_wrapper form_wrapper2" id="callFormWrapper">
+			<h6>Вас беспокоит острая <br>зубная боль?</h6>
+			<p>Заполните форму, чтобы наш менеджер <br>прямо сейчас отправил за Вами <br>бесплатное такси, и наши врачи в срочном <br>порядке окажут Вам помощь</p>
+			<form method="post" class="form" id="callForm" action="mail.php">
+				<input type="hidden" name="whatform" value="Форма - Больно. Вызвать мне такси" />
+				<input type="text" name="name" placeholder="Ваше имя" />
+				<input type="tel" name="phone" class="phone" placeholder="Ваш телефон" />
+				<input type="text" name="address" placeholder="Ваш адрес" />
+				<button class="main_btn2">Вызвать мне такси</button>
+			</form>
+		</div>
+	</div>
 	
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>
@@ -840,7 +949,6 @@
 	<script src="libs/slick/slick.min.js"></script>
 	<script src="libs/maskedinput/jquery.maskedinput.min.js"></script>
 	<script src="libs/validation/jquery.validate.min.js"></script>
-	<script src="libs/scroll2id/PageScroll2id.min.js"></script>
 	<script src="libs/animate/wow.min.js"></script>
 	<script>
 		new WOW().init();

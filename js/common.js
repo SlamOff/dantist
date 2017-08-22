@@ -66,7 +66,23 @@ document.getElementById("seconds"));
 	$('.popup').magnificPopup({
 		type: 'inline'
 	});
-
+	$('#mainVideo').click(function(){
+		if (this.paused) {
+			this.play();
+			$('#overlay').fadeOut('fast');
+		} else {
+			$('#overlay').fadeIn('fast');
+			this.pause();
+		}
+	});
+	$('.esc').click(function(){
+		$(this).parent('.fixed_button').hide();
+	});
+	$('#overlay').on('click', function(event) {
+		event.preventDefault();
+		$('#overlay').fadeOut('fast');
+		$('#mainVideo').get(0).play();
+	});
 	//mask
 	jQuery(function($){
 		$('.phone').mask('+38(099) 999-9999');
@@ -111,6 +127,26 @@ document.getElementById("seconds"));
 			breakpoint: 992,
 			settings: {
 				slidesToShow: 2,
+				dots: false,
+				swipe: true
+			}
+			}
+		]
+	});
+	$('.review_slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		prevArrow: '.review_prev',
+		nextArrow: '.review_next',
+		dots: true,
+		swipe: false,
+		customPaging: function(slider, i) {
+			return '<div class="dot"></div>';
+		},
+		responsive: [
+			{
+			breakpoint: 992,
+			settings: {
 				dots: false,
 				swipe: true
 			}
@@ -773,6 +809,34 @@ document.getElementById("seconds"));
 			email: {
 				required: validationName,
 				email: validationEmail
+			},
+			phone: {
+				required: validationPhone
+			}
+		}
+	});
+	$('#callForm').validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2,
+				maxlength: 16
+			},
+			address: {
+				required: true
+			},
+			phone: {
+				required: true
+			}
+		},
+		messages: {
+			name: {
+				required: validationName,
+				minlength: validationNameMax,
+				maxlength: validationNameMax
+			},
+			address: {
+				required: validationName
 			},
 			phone: {
 				required: validationPhone
