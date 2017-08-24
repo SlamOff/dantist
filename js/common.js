@@ -103,7 +103,21 @@ document.getElementById("seconds"));
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		prevArrow: '.photo_prev',
-		nextArrow: '.photo_next'
+		nextArrow: '.photo_next',
+		dots: true,
+		swipe: false,
+		customPaging: function(slider, i) {
+			return '<div class="dot"></div>';
+		},
+		responsive: [
+			{
+			breakpoint: 992,
+			settings: {
+				dots: false,
+				swipe: true
+			}
+			}
+		]
 	});
 	$('.cert_slider').slick({
 		slidesToShow: 4,
